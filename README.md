@@ -1,48 +1,48 @@
 # Interesting Algorithms 🧠
 
-A collection of classic algorithms implemented in Python.
+Sbírka zajímavých algoritmů implementovaných v Pythonu.
 
 ---
 
-## 📁 Repository Content
+## 📁 Obsah repozitáře
 
-### 🎮 1. Minimax with Alpha-Beta Pruning
-An AI agent designed to play Tic-Tac-Toe optimally.
+### 🎮 1. Minimax s Alpha-Beta prořezáváním
+AI agent navržený pro optimální hraní piškvorek (Tic-Tac-Toe).
 
-* **Core Principle:** The algorithm builds a decision tree of all possible future moves. It assumes both players play perfectly: the "Maximizer" (+1) tries to achieve the highest score, while the "Minimizer" (-1) tries to force the lowest score.
-* **Optimization:** Implements **Alpha-Beta Pruning** to skip searching branches that cannot possibly influence the final decision, significantly improving performance.
-* **File:** `minimax.py`
-
----
-
-### 👑 2. Backtracking (N-Queens Problem)
-A recursive approach to solving the famous N-Queens puzzle on a chessboard.
-
-* **Core Principle:** The algorithm places queens row by row. If it detects a conflict (two queens attacking each other), it "backtracks" to the previous row and tries a different column.
-* **Key Logic:** Uses a safety check to ensure no two queens share the same row, column, or diagonal.
-* **File:** `backtracking.py`
+* **Hlavní princip:** Algoritmus buduje rozhodovací strom všech možných budoucích tahů. Předpokládá, že oba hráči hrají dokonale: „Maximalizátor“ (+1) se snaží dosáhnout nejvyššího skóre, zatímco „Minimalizátor“ (-1) se snaží vynutit skóre co nejnižší.
+* **Optimalizace:** Implementuje **Alpha-Beta prořezávání** (pruning), které přeskakuje prohledávání větví, jež nemohou ovlivnit konečné rozhodnutí, čímž výrazně zvyšuje výkon.
+* **Soubor:** `minimax.py`
 
 ---
 
-### 🎒 3. Genetic Algorithm (Knapsack Problem)
-A heuristic search inspired by Charles Darwin’s theory of natural evolution.
+### 👑 2. Backtracking (Problém N dam)
+Rekurzivní přístup k řešení hádanky rozmístění N dam na šachovnici.
 
-* **Core Principle:** Solves the Knapsack optimization problem by evolving a population of candidate solutions through selection, crossover, and mutation.
-* **Evolutionary Process:** * **Selection:** Picks the best-performing individuals based on a fitness function (total value vs. capacity).
-    * **Crossover:** Combines "DNA" from two parents to create offspring.
-    * **Mutation:** Introduces random changes to maintain genetic diversity and avoid local optima.
-* **File:** `genetic_algorithm.py`
+* **Hlavní princip:** Algoritmus umisťuje dámy řádek po řádku. Pokud detekuje konflikt (dvě dámy se vzájemně ohrožují), vrátí se zpět (**backtrack**) do předchozího řádku a zkusí jiný sloupec.
+* **Klíčová logika:** Používá kontrolu bezpečnosti, aby zajistil, že žádné dvě dámy nesdílejí stejný řádek, sloupec ani diagonálu.
+* **Soubor:** `backtracking.py`
 
 ---
 
-## 🚀 Getting Started
+### 🎒 3. Genetický algoritmus (Problém batohu)
+Heuristické vyhledávání inspirované Darwinovou teorií přirozené evoluce.
 
-### Prerequisites
+* **Hlavní princip:** Řeší optimalizační problém batohu evolucí populace kandidátních řešení pomocí selekce, křížení a mutace.
+* **Evoluční proces:** * **Selekce:** Vybere nejúspěšnější jedince na základě fitness funkce (celková hodnota vs. kapacita).
+    * **Křížení (Crossover):** Kombinuje „DNA“ dvou rodičů pro vytvoření potomka.
+    * **Mutace:** Zavádí náhodné změny pro zachování genetické rozmanitosti a zabránění uvíznutí v lokálním optimu.
+* **Soubor:** `genetic_algorithm.py`
+
+---
+
+## 🚀 Jak začít
+
+### Požadavky
 * Python 3.x
-* NumPy (required for `minimax.py`)
+* NumPy (vyžadováno pro `minimax.py`)
 
-### Running the Scripts
-You can run each algorithm independently:
+### Spuštění skriptů
+Každý algoritmus můžete spustit samostatně:
 ```bash
 python minimax.py
 python backtracking.py
